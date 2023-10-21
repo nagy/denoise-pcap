@@ -1,0 +1,47 @@
+#+title: Denoise PCAP
+#+author: Daniel Nagy
+#+startup: noinlineimages content
+#+options: html-postamble:nil toc:nil
+
+Internet Background Noise is a term that identifies packets between
+interconnected networks, which are not both parties intent to this
+communication. This can include port scans and misconfigured devices. Persisting
+and analyzing this noise in a file of captured packets, can burden the workflow
+of forensic analysts because clearer communication flow are obstructed.
+
+* Directory Structure
+* Installation
+In the directory of the prebuilt artifacts, there is a =denoise_pcap= executable file.
+You can install that somewhere into your =PATH=, for example in =/usr/bin/=.
+* Usage
+#+begin_src sh
+denoise_pcap <inputfile> <outputfile> [filter]
+#+end_src
+The default =filter= is =is_noise=, which should provide a sensible default set.
+To get a list of other filters, run:
+#+begin_src sh
+denoise_pcap --list
+#+end_src
+* Custom Filter
+To write your own filters, you have to write them in a separate file and put that on your =PYTHONPATH=:
+#+begin_src sh
+cat > /tmp/mymodule.hy <<EOF
+(eval-and-compile
+  (require hyrule * :readers *)
+  (import denoise_pcap.main *)
+  (require denoise_pcap.main * :readers *))
+
+(deffilter my-filter []
+  "Filter anything with port 80."
+  (if (or (= pkt.sport 80)
+          (= pkt.dport 80)
+          pkt.tcp?)
+      [pkt]
+      []))
+EOF
+PYTHONPATH=/tmp denoise_pcap input.pcap output.pcap mymodule:my_filter
+#+end_src
+
+* License
+
+[[./LICENSE][AGPL3+]]

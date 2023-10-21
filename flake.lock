@@ -1,0 +1,103 @@
+{
+  "nodes": {
+    "haumea": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1697205539,
+        "narHash": "sha256-gHEy0Q+eEQJkWl6/DpFxXPOlTx/lMU7Pvs/bwoq4OhI=",
+        "owner": "nix-community",
+        "repo": "haumea",
+        "rev": "fc119c500189f739fec7ad33d111f9c92910eccf",
+        "type": "github"
+      },
+      "original": {
+        "id": "haumea",
+        "type": "indirect"
+      }
+    },
+    "nix-bundle": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1678129993,
+        "narHash": "sha256-v6KkJT8dQkjsN9Dkx9P5zo+BYnjqQ1oJv3n6dW7fsaM=",
+        "owner": "matthewbauer",
+        "repo": "nix-bundle",
+        "rev": "83eadede9087c2c94a018ea6e240da552355dcc1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "matthewbauer",
+        "repo": "nix-bundle",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1697723726,
+        "narHash": "sha256-SaTWPkI8a5xSHX/rrKzUe+/uVNy6zCGMXgoeMb7T9rg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "7c9cc5a6e5d38010801741ac830a3f8fd667a7a0",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "nur": {
+      "locked": {
+        "lastModified": 1697905355,
+        "narHash": "sha256-EgbgUX9TGD1z/ZIB/AOL8lyb6ZsmJCxHCs+3C8WMp90=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "70ee6e93df6f6f5a59f4f6d1ed8dfa6fe371d3a4",
+        "type": "github"
+      },
+      "original": {
+        "id": "nur",
+        "type": "indirect"
+      }
+    },
+    "pcap-utils": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1686749400,
+        "narHash": "sha256-gACJX7Z81ejrNtKOm2QlY78TQZ4RRqTVjjYwn+v7wMM=",
+        "owner": "nagy",
+        "repo": "pcap-utils",
+        "rev": "086548f975b46ce6430bdd3bf875a8bc9c24445f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nagy",
+        "repo": "pcap-utils",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "haumea": "haumea",
+        "nix-bundle": "nix-bundle",
+        "nixpkgs": "nixpkgs",
+        "nur": "nur",
+        "pcap-utils": "pcap-utils"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,0 +1,6 @@
+input_length: 6
+length: 2
+repr: |-
+  [<IP  frag=0 proto=tcp src=0.0.0.1 dst=1.1.1.2 |<TCP  sport=27015 dport=www_http flags=S |>>,
+   <IP  frag=0 proto=tcp src=1.1.1.2 dst=0.0.0.1 |<TCP  sport=www_http dport=27015 flags=SA |>>]
+str_type: <class 'list'>

@@ -1,0 +1,20 @@
+[project]
+name = "denoise_pcap"
+description = "denoise pcap"
+version = "0.1.0"
+authors = [
+    {name = "Daniel Nagy", email = "danielnagy@posteo.de"},
+]
+dependencies = [
+  "hy",
+  "hyrule",
+  "pcap_utils",
+  "tqdm"
+]
+[project.scripts]
+denoise-pcap = "denoise_pcap:main"
+
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]

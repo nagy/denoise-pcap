@@ -1,0 +1,6 @@
+input_length: 2
+length: 2
+repr: |-
+  [<IP  frag=0 proto=udp src=1.1.1.1 dst=0.0.0.1 |<UDP  sport=www_http dport=27015 |<NTPHeader  |>>>,
+   <IP  frag=0 proto=udp src=0.0.0.1 dst=1.1.1.1 |<UDP  sport=27015 dport=www_http |<NTPHeader  |>>>]
+str_type: <class 'list'>

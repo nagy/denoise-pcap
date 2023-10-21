@@ -1,0 +1,13 @@
+input: 1
+input_length: 8
+length: 8
+repr: |-
+  [<IP  frag=0 proto=tcp src=0.0.0.1 dst=1.1.1.1 |<TCP  sport=cadlock2 dport=www_http flags=S |<Raw  load='' |>>>,
+   <IP  frag=0 proto=tcp src=1.1.1.1 dst=0.0.0.1 |<TCP  sport=www_http dport=cadlock2 ack=1 flags=SA |<Raw  load='' |>>>,
+   <IP  frag=0 proto=tcp src=0.0.0.1 dst=1.1.1.1 |<TCP  sport=cadlock2 dport=www_http seq=1 ack=1 flags=A |<Raw  load='' |>>>,
+   <IP  frag=0 proto=tcp src=0.0.0.1 dst=1.1.1.1 |<TCP  sport=cadlock2 dport=www_http seq=1 ack=1 flags=PA |<Raw  load='GET' |>>>,
+   <IP  frag=0 proto=tcp src=1.1.1.1 dst=0.0.0.1 |<TCP  sport=www_http dport=cadlock2 seq=1 ack=4 flags=A |<Raw  load='' |>>>,
+   <IP  frag=0 proto=tcp src=0.0.0.1 dst=1.1.1.1 |<TCP  sport=cadlock2 dport=www_http seq=4 ack=1 flags=FA |<Raw  load='' |>>>,
+   <IP  frag=0 proto=tcp src=1.1.1.1 dst=0.0.0.1 |<TCP  sport=www_http dport=cadlock2 seq=1 ack=5 flags=FA |<Raw  load='' |>>>,
+   <IP  frag=0 proto=tcp src=0.0.0.1 dst=1.1.1.1 |<TCP  sport=cadlock2 dport=www_http seq=5 ack=2 flags=A |<Raw  load='' |>>>]
+str_type: <class 'list'>
